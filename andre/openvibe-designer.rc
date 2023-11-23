@@ -1,0 +1,40 @@
+#include "winres.h"
+
+ID_Icon ICON DISCARDABLE "/openvibe-3.3.1-src/designer/scripts/icons/designer.ico"
+
+// Language is US English
+LANGUAGE LANG_ENGLISH, SUBLANG_DEFAULT
+
+#ifndef DEBUG
+#define VER_DEBUG                   0
+#else
+#define VER_DEBUG                   VS_FF_DEBUG
+#endif
+
+// Add version information
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,1,0
+ PRODUCTVERSION 0,0,1,0
+ FILEOS VOS__WINDOWS32
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "Inria"
+            VALUE "FileDescription", "OpenViBE Designer for Win32"
+            VALUE "FileVersion", "0.0.1.0"
+            VALUE "InternalName", "openvibe-designer"
+            VALUE "LegalCopyright", "Copyright - Inria 2012-2022"
+            VALUE "OriginalFilename", "openvibe-designer"
+            VALUE "ProductName", "OpenViBE Designer"
+            VALUE "ProductVersion", "0.0.1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+		// Indicates that Software is translated in US English in the Windows ANSI codepage (1252).
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
